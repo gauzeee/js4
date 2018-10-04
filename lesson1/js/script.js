@@ -1,19 +1,23 @@
 let money = +prompt("Ваш бюджет на месяц?")
-let shopName = prompt("Название вашего магазина?")
+let time = prompt("Введите дату в формате YYYY-MM-DD")
 
-mainList = {
+appData = {
     budget: money,
-    name: shopName,
-    shopGoods: [],
-    employers: {},
-    open: false
+    timeData: time,
+    expences: {},
+    optionalExpences: {},
+    income: [],
+    savings: false
 }
 
-for (let i = 0; i < 3; i++ ) {
-    let item = prompt("Какой тип товаров будем продавать?")
-    mainList.shopGoods.push(item)
+for (let i = 0; i < 2; i++ ) {
+    let expenceItem = prompt("Введите обязательную статью расходов в этом месяце")
+    let expenceCost = prompt("Во сколько это обойдется?")
+    appData.expences[expenceItem] = expenceCost
+    appData.budget -= expenceCost
 }
 
-console.log(mainList)
-alert(mainList.budget)
+console.log(appData)
+
+alert("Ваш бюджет на " + appData.timeData + " соствляет: " + appData.budget/30 + " с учетом расходов в текущем месяце.")
 
