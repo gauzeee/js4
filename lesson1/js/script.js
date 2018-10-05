@@ -20,4 +20,3 @@ for (let i = 0; i < 2; i++ ) {
 console.log(appData)
 
 alert("Ваш бюджет на " + appData.timeData + " соствляет: " + appData.budget/30 + " с учетом расходов в текущем месяце.")
-
