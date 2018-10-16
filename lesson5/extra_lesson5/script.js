@@ -1,4 +1,7 @@
-let time = new Date();
+let clock = document.createElement('h2');
+
+function clockView() {
+    let time = new Date();
     month = time.getMonth();
     day = time.getDate();
     hour = time.getHours();
@@ -19,16 +22,17 @@ function checkZero(int) {
     }
 }
 
-clock = document.createElement('h2');
 clock.innerHTML = checkZero(hour) + ':' + checkZero(minutes) + ':' +
                 checkZero(seconds) + ' ' + checkZero(day) + '.' +
                 checkZero(month) + '.' + time.getFullYear();
 document.body.insertBefore(clock, firstDate);
-
+}
+setInterval(clockView, 1000);
 
 function today() {
     let week = ['Воскресенье', "Понедельник", 
                 "Вторник", "Среда", "Четверг", "Пятница.", "Суббота"];
+        time = new Date();
         dayOfWeek = document.createElement('h2');
     
     dayOfWeek.innerText = week[time.getDay()];
