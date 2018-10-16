@@ -1,0 +1,49 @@
+.box {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball {
+    background-color: red;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.buttons {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    height: 50px;
+    width: 35%;
+    color: black;
+    font-size: 20px;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 15px;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hide {
+    display: none;
+}
