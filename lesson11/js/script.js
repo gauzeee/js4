@@ -180,8 +180,8 @@ window.addEventListener('DOMContentLoaded', function() {
     // Form
 
     let message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с вами свяжемся!',
+        loading: '<img src="img/ajax-loader.gif"></img>',
+        success: '<img src="img/handshake.png"></img>',
         failure: 'Что-то пошло не так...'
     };
 
