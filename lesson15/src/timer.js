@@ -3,7 +3,7 @@ export function timer() {
         function checkZero(int) {
             if (int <= 0) {
                 int = '00';
-            } else if (int < 10) {
+            } else if (int < 10 && int > 0) {
                 int = '0' + int;
             } else {
                 int = int;
