@@ -13,14 +13,14 @@ export function calc() {
         personsSum = +this.value;
         total = (daysSum + personsSum) * 4000;
 
-        if (restDays.value == '' || this.value == '') {
+        if (restDays.value == '' || this.value == '' || restDays.value == '0' || this.value == '0') {
             totalValue.innerHTML = 0;
         } else {
-            totalValue.innerHTML = total;
+            sumWithOptions();
         }
     });
 
-    persons.addEventListener('input', function() {
+    persons.addEventListener('input', function(event) {
         this.value = `${this.value.replace(/\D/g, "")}`;
     });
 
@@ -28,23 +28,29 @@ export function calc() {
         this.value = `${this.value.replace(/\D/g, "")}`;
     });
 
-    restDays.addEventListener('change', function() {
+    restDays.addEventListener('change', function(event) {
         daysSum = +this.value;
         total = (daysSum + personsSum) * 4000;
 
-        if (persons.value == '' || this.value == '') {
+        if (persons.value == '' || this.value == '' || this.value == '0' || persons.value == '0') {
             totalValue.innerHTML = 0;
         } else {
-            totalValue.innerHTML = total;
+            sumWithOptions();
         }
     });
 
-    place.addEventListener('change', function() {
-        if (restDays.value == '' || persons.value == '') {
-            totalValue.innerHTML = 0;
-        } else {
-            let a = total;
-            totalValue.innerHTML = a * (this.options[this.selectedIndex].value);
-        }
+    place.addEventListener('change', function(event) {
+        sumWithOptions();
     });
+
+    function sumWithOptions() {
+        let target = document.querySelector('#select');
+        if (restDays.value == '' || persons.value == '' || restDays.value == '0' || persons.value == '0') {
+            totalValue.innerHTML = 0;
+            total = 0;
+        } else {
+            let a = (+persons.value + +restDays.value) * 4000;
+            totalValue.innerHTML = a * (target.options[target.selectedIndex].value);
+        }
+    }
 }

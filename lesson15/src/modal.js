@@ -8,6 +8,7 @@ export function modal() {
         overlay.style.display = 'block';
         checkAgent('more');
         document.body.style.overflow = 'hidden';
+        
     });  
 
     close.addEventListener('click', function() {

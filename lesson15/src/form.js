@@ -4,7 +4,7 @@ export function form() {
     let message = {
         loading: '<img src="img/ajax-loader.gif"></img>',
         success: '<img src="img/handshake.png"></img>',
-        failure: 'Что-то пошло не так...'
+        failure: '<img style="width: 50px;" src="img/error.png"></img>'
     };
 
     let tel1 = document.querySelector('#tel1'),
