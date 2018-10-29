@@ -12,7 +12,7 @@ export function timer() {
         }
     
         let date = new Date(),
-            deadline = `${checkZero(date.getFullYear())}-${checkZero(date.getMonth() + 1)}-${checkZero(date.getDate() + 1)}`;
+            deadline = '2018/11/1';
     
         function getTimeRemaning(endtime) {
             let t = Date.parse(endtime) - Date.parse(new Date()),
