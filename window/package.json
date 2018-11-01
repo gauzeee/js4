@@ -1,0 +1,30 @@
+{
+  "name": "js4final",
+  "version": "1.0.0",
+  "description": "Glo Academy JS4.0 Final Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gauzeee/js4.git"
+  },
+  "author": "gauzeee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauzeee/js4/issues"
+  },
+  "homepage": "https://github.com/gauzeee/js4#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
+  }
+}
