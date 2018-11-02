@@ -106,6 +106,9 @@ export function calc() {
       input.value = "";
     });
     formData = new FormData();
+    setTimeout(function() {
+      statusMessage.innerHTML = "";
+    }, 10000);
   }
 
   form.addEventListener("submit", function(event) {

@@ -42,6 +42,9 @@ export function modalsForms() {
         for (let i = 0; i < input.length; i++) {
           input[i].value = "";
         }
+        setTimeout(function() {
+          statusMessage.innerHTML = "";
+        }, 10000);
       }
 
       postData(formData)
