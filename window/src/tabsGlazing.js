@@ -2,6 +2,7 @@ export function tabsGlazing() {
   let tab = document.querySelectorAll(".glazing-header-tab"),
     info = document.querySelector(".glazing-header"),
     links = document.querySelectorAll(".glazing-link"),
+    imgs = document.querySelectorAll(".glazing_block > img"),
     tabContent = document.querySelectorAll(".glazing-tabcontent");
 
   function hideTabContent(a) {
@@ -24,7 +25,11 @@ export function tabsGlazing() {
     link.addEventListener("click", function(event) {
       console.log(event.target);
       for (let i = 0; i < tab.length; i++) {
-        if (event.target == links[i] || event.target == tab[i]) {
+        if (
+          event.target == links[i] ||
+          event.target == tab[i] ||
+          event.target == imgs[i]
+        ) {
           hideTabContent(0);
           showTabContent(index);
           break;
