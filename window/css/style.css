@@ -24,6 +24,12 @@ textarea:focus {
   outline: none;
 }
 
+:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+}
+
 .no-padding {
   padding: 0 !important;
 }
@@ -533,18 +539,6 @@ textarea:focus {
   color: #454545;
 }
 
-/*test*/
-/*.tabs li {
-	display: inline-block;
-}
-.tabs .glazing_block.active  a {
-			text-decoration: none;
-			color: #454545;
-}
-.tabs_divs .noactive {
-	display: none;
-}*/
-/*/test*/
 /*Decoration*/
 .decoration {
   padding: 8rem 0;
