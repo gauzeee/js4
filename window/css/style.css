@@ -28,6 +28,29 @@ textarea:focus {
   padding: 0 !important;
 }
 
+.form_calc {
+  /*margin-top: 2rem;*/
+  padding: 2rem 5rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+
+.form_calc h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.form_calc h2 span {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
 .form {
   /*margin-top: 2rem;*/
   padding: 2rem 5rem;
@@ -452,6 +475,26 @@ textarea:focus {
   padding: 0 6rem;
 }
 
+.glazing-tabcontent .hide {
+  display: none;
+}
+
+.glazing-tabcontent .show {
+  display: block;
+}
+
+.decoration-tabcontent .hide {
+  display: none;
+}
+
+.decoration-tabcontent .show {
+  display: block;
+}
+
+.decoration-tabcontent {
+  opacity: 1;
+}
+
 .glazing_price p {
   display: inline-block;
   margin-right: 3rem;
@@ -479,6 +522,10 @@ textarea:focus {
 .glazing .french,
 .glazing .rise {
   display: none;
+}
+
+.glazing-tabcontent {
+  opacity: 1;
 }
 
 .glazing a.active {
@@ -524,14 +571,6 @@ textarea:focus {
   border: none;
   text-decoration: none;
   color: #0089cd;
-  /*border-top: 1rem solid @blue;
-				height: 8rem;
-				padding: 2rem 1rem;
-				background: -webkit-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -moz-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -o-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: -ms-linear-gradient(-90deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);
-				background: linear-gradient(180deg, #ebebeb 0%, #ebebeb 0%, rgba(255, 255, 255, 0) 100%);*/
 }
 
 .decoration_item .no_click {
@@ -539,6 +578,12 @@ textarea:focus {
   height: 8rem;
   padding: 2rem 0;
   border-top: 1rem solid #f7f7f7;
+}
+
+.clicked {
+  border: none !important;
+  text-decoration: none !important;
+  color: #0089cd !important;
 }
 
 .decoration_item .after_click {
@@ -849,6 +894,7 @@ textarea:focus {
   transform: translateX(-50%);
   width: 40rem;
   background-color: #ffffff;
+  opacity: 1;
 }
 
 .popup_close,
@@ -872,6 +918,7 @@ textarea:focus {
   height: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .popup_calc_content {
@@ -954,6 +1001,7 @@ textarea:focus {
   height: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .popup_calc_profile_content {
