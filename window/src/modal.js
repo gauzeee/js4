@@ -15,7 +15,8 @@ export function modals() {
   modalEngineer.addEventListener("click", function(event) {
     if (
       event.target.matches("div.popup_engineer") ||
-      event.target.classList.contains("popup_close")
+      event.target.classList.contains("popup_close") ||
+      event.target.matches("strong")
     ) {
       modalEngineer.classList.remove("fade");
       modalEngineer.classList.add("fadeout");
@@ -43,7 +44,8 @@ export function modals() {
   modalPopup.addEventListener("click", function(event) {
     if (
       event.target.matches("div.popup") ||
-      event.target.classList.contains("popup_close")
+      event.target.classList.contains("popup_close") ||
+      event.target.matches("strong")
     ) {
       modalPopup.classList.remove("fade");
       modalPopup.classList.add("fadeout");
