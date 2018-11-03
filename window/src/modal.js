@@ -22,7 +22,7 @@ export function modals() {
       modalEngineer.classList.add("fadeout");
       setTimeout(function() {
         modalEngineer.style.display = "none";
-      }, 1000);
+      }, 980);
     }
   });
 
@@ -51,7 +51,7 @@ export function modals() {
       modalPopup.classList.add("fadeout");
       setTimeout(function() {
         modalPopup.style.display = "none";
-      }, 1000);
+      }, 980);
     }
   });
 }

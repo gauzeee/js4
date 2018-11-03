@@ -35,7 +35,7 @@ export function calc() {
           item.style.display = "none";
           item.classList.remove("fade");
           item.classList.remove("fadeout");
-        }, 1000);
+        }, 980);
         item.classList.remove("fade");
         item.classList.add("fadeout");
         clearInputs();
