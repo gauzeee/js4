@@ -20,18 +20,18 @@ export function calc() {
       failure: "Произошла ошибка"
     };
 
-  priceButtons.forEach(function(btn) {
-    btn.addEventListener("click", function() {
+  priceButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
       calc.style.display = "block";
       calc.classList.remove("fadeout");
       calc.classList.add("fade");
     });
   });
 
-  close.forEach(function(x) {
-    x.addEventListener("click", function() {
+  close.forEach(x => {
+    x.addEventListener("click", () => {
       popups.forEach(function(item) {
-        setTimeout(function() {
+        setTimeout(() => {
           item.style.display = "none";
           item.classList.remove("fade");
           item.classList.remove("fadeout");
@@ -43,14 +43,14 @@ export function calc() {
     });
   });
 
-  balconIcons.forEach(function(icon, index) {
-    icon.addEventListener("click", function(event) {
+  balconIcons.forEach((icon, index) => {
+    icon.addEventListener("click", event => {
       event.preventDefault();
-      balconIcons.forEach(function(icon) {
+      balconIcons.forEach(icon => {
         icon.style.width = "20%";
         icon.classList.remove("choosen");
       });
-      balconBig.forEach(function(img) {
+      balconBig.forEach(img => {
         img.style.display = "none";
       });
       this.style.width = "30%";
@@ -59,7 +59,7 @@ export function calc() {
     });
   });
 
-  calcNextBtn.addEventListener("click", function() {
+  calcNextBtn.addEventListener("click", () => {
     let width = document.querySelector("#width").value,
       height = document.querySelector("#height").value,
       type = document.querySelector(".choosen");
@@ -75,15 +75,15 @@ export function calc() {
     }
   });
 
-  coldBox.addEventListener("click", function() {
+  coldBox.addEventListener("click", () => {
     warmBox.checked = false;
   });
 
-  warmBox.addEventListener("click", function() {
+  warmBox.addEventListener("click", () => {
     coldBox.checked = false;
   });
 
-  calcProfileNextBtn.addEventListener("click", function() {
+  calcProfileNextBtn.addEventListener("click", () => {
     let viewType = document.querySelector("#view_type").value;
 
     if (!warmBox.checked && !coldBox.checked) {
@@ -111,7 +111,7 @@ export function calc() {
     }, 10000);
   }
 
-  form.addEventListener("submit", function(event) {
+  form.addEventListener("submit", event => {
     event.preventDefault();
     let name = document.querySelector("#calc_user_name").value,
       phone = document.querySelector("#calc_phone").value;
@@ -122,7 +122,7 @@ export function calc() {
     form.appendChild(statusMessage);
 
     function postData(data) {
-      return new Promise(function(resolve, reject) {
+      return new Promise((resolve, reject) => {
         let request = new XMLHttpRequest();
 
         request.open("POST", "server.php");
@@ -131,7 +131,7 @@ export function calc() {
           "application/json; charset=utf-8"
         );
 
-        request.onreadystatechange = function() {
+        request.onreadystatechange = () => {
           if (request.readyState < 4) {
             resolve();
           } else if (request.readyState === 4) {

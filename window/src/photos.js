@@ -5,8 +5,8 @@ export function photos() {
   bigPhoto.classList.add("big_photo");
   wrap.insertBefore(bigPhoto, photos[0]);
 
-  photos.forEach(function(photo, index) {
-    photo.addEventListener("click", function(event) {
+  photos.forEach((photo, index) => {
+    photo.addEventListener("click", event => {
       event.preventDefault();
       bigPhoto.innerHTML = `<img src='img/our_works/big_img/${index + 1}.png'>`;
       bigPhoto.classList.remove("fadeout");
@@ -15,7 +15,7 @@ export function photos() {
     });
   });
 
-  bigPhoto.addEventListener("click", function(event) {
+  bigPhoto.addEventListener("click", event => {
     if (event.target.classList.contains("big_photo")) {
       bigPhoto.classList.remove("fade");
       bigPhoto.classList.add("fadeout");

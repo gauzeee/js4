@@ -4,7 +4,7 @@ export function modals() {
     modalPopup = document.querySelector(".popup"),
     callBtn = document.querySelectorAll(".phone_link");
 
-  setTimeout(function() {
+  setTimeout(() => {
     modalPopup.classList.remove("fadeout");
     modalPopup.style.display = "block";
     modalPopup.classList.add("fade");
@@ -12,7 +12,7 @@ export function modals() {
 
   //time();
 
-  modalEngineer.addEventListener("click", function(event) {
+  modalEngineer.addEventListener("click", event => {
     if (
       event.target.matches("div.popup_engineer") ||
       event.target.classList.contains("popup_close") ||
@@ -26,14 +26,14 @@ export function modals() {
     }
   });
 
-  btnEngineer.addEventListener("click", function() {
+  btnEngineer.addEventListener("click", () => {
     modalEngineer.classList.remove("fadeout");
     modalEngineer.style.display = "block";
     modalEngineer.classList.add("fade");
   });
 
-  callBtn.forEach(function(item) {
-    item.addEventListener("click", function(event) {
+  callBtn.forEach(item => {
+    item.addEventListener("click", event => {
       event.preventDefault();
       modalPopup.classList.remove("fadeout");
       modalPopup.style.display = "block";
@@ -41,7 +41,7 @@ export function modals() {
     });
   });
 
-  modalPopup.addEventListener("click", function(event) {
+  modalPopup.addEventListener("click", event => {
     if (
       event.target.matches("div.popup") ||
       event.target.classList.contains("popup_close") ||
@@ -49,7 +49,7 @@ export function modals() {
     ) {
       modalPopup.classList.remove("fade");
       modalPopup.classList.add("fadeout");
-      setTimeout(function() {
+      setTimeout(() => {
         modalPopup.style.display = "none";
       }, 980);
     }

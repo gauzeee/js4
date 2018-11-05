@@ -7,15 +7,15 @@ export function modalsForms() {
       failure: "Произошла ошибка"
     };
 
-  forms.forEach(function(form) {
-    form.addEventListener("submit", function(event) {
+  forms.forEach(form => {
+    form.addEventListener("submit", event => {
       event.preventDefault();
       let input = form.querySelectorAll("input");
       form.appendChild(statusMessage);
       let formData = new FormData(form);
 
       function postData(data) {
-        return new Promise(function(resolve, reject) {
+        return new Promise((resolve, reject) => {
           let request = new XMLHttpRequest();
 
           request.open("POST", "server.php");
@@ -24,7 +24,7 @@ export function modalsForms() {
             "application/json; charset=utf-8"
           );
 
-          request.onreadystatechange = function() {
+          request.onreadystatechange = () => {
             if (request.readyState < 4) {
               resolve();
             } else if (request.readyState === 4) {
@@ -42,7 +42,7 @@ export function modalsForms() {
         for (let i = 0; i < input.length; i++) {
           input[i].value = "";
         }
-        setTimeout(function() {
+        setTimeout(() => {
           statusMessage.innerHTML = "";
         }, 10000);
       }

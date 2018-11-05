@@ -25,8 +25,8 @@ export function tabsDecoration() {
     tabContent[b].classList.remove("hide");
   }
 
-  tab.forEach(function(link, index) {
-    link.addEventListener("click", function(event) {
+  tab.forEach((link, index) => {
+    link.addEventListener("click", event => {
       console.log(event.target);
       for (let i = 0; i < tab.length; i++) {
         if (event.target == links[i] || event.target == linksIn[i]) {
