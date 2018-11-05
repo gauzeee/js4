@@ -53,8 +53,8 @@ export function calc() {
       balconBig.forEach(img => {
         img.style.display = "none";
       });
-      this.style.width = "30%";
-      this.classList.add("choosen");
+      event.target.style.width = "30%";
+      event.target.classList.add("choosen");
       balconBig[index].style.display = "inline-block";
     });
   });
