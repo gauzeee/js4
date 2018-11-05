@@ -64,7 +64,13 @@ export function calc() {
       height = document.querySelector("#height").value,
       type = document.querySelector(".choosen");
 
-    if (width == "" || height == "" || type == null) {
+    if (
+      width == "" ||
+      height == "" ||
+      type == null ||
+      width == "0" ||
+      height == "0"
+    ) {
       alert("Введите высоту и ширину, выбирите форму балкона");
     } else {
       formData.append("form", type.alt);
